@@ -18,6 +18,8 @@ RSpec.describe User, type: :model do
 
     describe "InDirect Associations" do
 
+    it { should have_many(:leaders_own_photos_feed) }
+
     end
 
     describe "Validations" do

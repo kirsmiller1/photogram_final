@@ -26,6 +26,10 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :leaders_own_photos_feed,
+             :through => :leaders,
+             :source => :own_photos
+
   # Validations
 
   # Include default devise modules. Others available are:

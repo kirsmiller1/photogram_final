@@ -68,13 +68,21 @@
 
         <!-- Display follow.recipient_id start -->
         <td>
-          <%= follow.receiver.created_at %>
+          <% if follow.receiver.present? %>
+            <a href="/users/<%= follow.receiver.id %>">
+              <%= follow.receiver.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display follow.recipient_id end -->
 
         <!-- Display follow.sender_id start -->
         <td>
-          <%= follow.sender.created_at %>
+          <% if follow.sender.present? %>
+            <a href="/users/<%= follow.sender.id %>">
+              <%= follow.sender.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display follow.sender_id end -->
 

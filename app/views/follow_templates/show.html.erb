@@ -1,0 +1,82 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Follow #<%= @follow.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/follows" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link follow start -->
+      <div class="col">
+        <a href="/follows/<%= @follow.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit follow
+        </a>
+      </div>
+      <!-- Edit link follow end -->
+
+      <!-- Delete link follow start -->
+      <div class="col">
+        <a href="/delete_follow/<%= @follow.id %>" class="btn btn-block btn-outline-secondary">
+          Delete follow
+        </a>
+      </div>
+      <!-- Delete link follow end -->
+    </div>
+
+    <dl>
+      <dt>
+        Status
+      </dt>
+      <!-- Display status start -->
+      <dd>
+        <%= @follow.status %>
+      </dd>
+      <!-- Display status end -->
+
+      <dt>
+        Recipient
+      </dt>
+      <!-- Display recipient_id start -->
+      <dd>
+        <%= @follow.recipient_id %>
+      </dd>
+      <!-- Display recipient_id end -->
+
+      <dt>
+        Sender
+      </dt>
+      <!-- Display sender_id start -->
+      <dd>
+        <%= @follow.sender_id %>
+      </dd>
+      <!-- Display sender_id end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@follow.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@follow.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

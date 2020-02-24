@@ -18,6 +18,10 @@ RSpec.describe User, type: :model do
 
     describe "InDirect Associations" do
 
+    it { should have_many(:senders) }
+
+    it { should have_many(:leaders) }
+
     it { should have_many(:leaders_own_photos_feed) }
 
     end

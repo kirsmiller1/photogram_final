@@ -22,15 +22,9 @@
   <!-- Label and input for status end -->
 
   <!-- Label and input for recipient_id start -->
-  <div class="form-group">
-    <label for="recipient_id">
-      Recipient
-    </label>
-
-    <!-- Input for recipient_id start -->
-    <%= select_tag(:recipient_id, options_from_collection_for_select(User.all, :id, :created_at, @follow.recipient_id), :class => "form-control") %>
-    <!-- Input for recipient_id end -->
-  </div>
+  <!-- Input for "recipient_id" start -->
+  <input type="hidden" name="recipient_id" value="<%= current_user.id %>">
+  <!-- Input for "recipient_id" end -->
   <!-- Label and input for recipient_id end -->
 
   <!-- Label and input for sender_id start -->

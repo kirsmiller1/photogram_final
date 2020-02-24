@@ -43,7 +43,7 @@ class FollowsController < ApplicationController
     @follow = Follow.find(params.fetch("id_to_modify"))
 
     @follow.status = params.fetch("status")
-    @follow.recipient_id = params.fetch("recipient_id")
+    
     @follow.sender_id = params.fetch("sender_id")
 
     if @follow.valid?

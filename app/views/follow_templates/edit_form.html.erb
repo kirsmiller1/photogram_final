@@ -4,36 +4,24 @@
 
 <hr>
 
-<!-- Form follow start -->
 <form action="/update_follow/<%= @follow.id %>" method="post">
-<!-- Form follow end -->
 
-  <!-- Label and input for status start -->
   <div class="form-group">
     <label for="status">
       Status
     </label>
 
-    <!-- Input for status start -->
     <input type="text" id="status" name="status" class="form-control" value="<%= @follow.status %>">
-    <!-- Input for status end -->
   </div>
-  <!-- Label and input for status end -->
 
-  <!-- Label and input for recipient_id start -->
-  <!-- Label and input for recipient_id end -->
 
-  <!-- Label and input for sender_id start -->
   <div class="form-group">
     <label for="sender_id">
       Sender
     </label>
 
-    <!-- Input for sender_id start -->
     <%= select_tag(:sender_id, options_from_collection_for_select(User.all, :id, :created_at, @follow.sender_id), :class => "form-control") %>
-    <!-- Input for sender_id end -->
   </div>
-  <!-- Label and input for sender_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update follow

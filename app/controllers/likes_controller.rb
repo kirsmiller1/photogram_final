@@ -56,7 +56,7 @@ class LikesController < ApplicationController
   def update_row
     @like = Like.find(params.fetch("id_to_modify"))
 
-    @like.fan_id = params.fetch("fan_id")
+    
     @like.photo_id = params.fetch("photo_id")
 
     if @like.valid?
